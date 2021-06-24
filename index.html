@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	 crossorigin="anonymous">
+
+	<script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js">
+
+	</script>
+	<script src="script.js">
+
+	</script>
+</head>
+
+<body style="background-color:#1f1f1f">
+	<h1 id="labelInput" style="color:#ffffff"><strong>Color</strong></h1>
+	<input type="color" id="colorInput"></input>
+  <h1 id="labelColor" style="color:#ffffff">Color</h1>
+  <p id="outputText" style="color:#ffffff">RGB</p>
+  <h1 id="labelLuminance" style="color:#ffffff"><strong>Luminancia</strong></h1>
+  <p id="luminanceText" style="color:#ffffff">0.8</p>
+  <p id="outputNNText" style="color:#ffffff"></p>
+
+  <svg width="1000" height="100">
+  <rect id="colorSVG" width="400" height="100" style="fill:#ffffff;" />
+  </svg>
+
+  <svg width="1000" height="100">
+  <rect id="generatedColorSVG" width="400" height="100" style="fill:#ffffff;" />
+  </svg>
+  
+  <input type="number" step="any" value="1" id="numberInput" min="0" max="1"></input>
+  <button type="button" onclick="setOutputColor()" class="btn btn-light">Generar</button> 
+</body>
+
+</html>
